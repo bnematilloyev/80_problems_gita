@@ -5,7 +5,7 @@ func daysCountInMonth(month int, year int) int {
 	case 1:
 		return 31
 	case 2:
-		if isLeapYear(year) == true {
+		if isLeapYear(year) {
 			return 29
 		}
 		return 28
