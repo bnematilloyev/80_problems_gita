@@ -1,10 +1,13 @@
 package main
 
-func daysCountInMonth(month int) int {
+func daysCountInMonth(month int, year int) int {
 	switch month {
 	case 1:
 		return 31
 	case 2:
+		if isLeapYear(year) == true {
+			return 29
+		}
 		return 28
 	case 3:
 		return 31
@@ -35,10 +38,6 @@ func daysCountInMonth(month int) int {
 //	fmt.Scan(&year)
 //	for i := 0; i < 3; i++ {
 //		fmt.Scan(&m)
-//		if isLeapYear(year) == true && m == 2 {
-//			fmt.Println(29)
-//		} else {
-//			fmt.Println(daysCountInMonth(m))
-//		}
+//		fmt.Println(daysCountInMonth(m, year))
 //	}
 //}
